@@ -634,16 +634,9 @@ text-align: center;
 /* ......../ media query /.......... */
 
 @media (max-width: 768px) {
+  
   .navbar {
     opacity: 0.95;
-    display: flex;
-  }
-
-  .navbar::after{
-    position: absolute;
-    content: src=("https://i.postimg.cc/s2tMfLV1/image-2022-10-20-214444745.png");
-    right : 0px;
-    top : 10px;
   }
 
   .navbar-container input[type="checkbox"],
