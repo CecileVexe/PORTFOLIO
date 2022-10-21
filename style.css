@@ -724,9 +724,8 @@ text-align: center;
 
   .Titre {
     position: absolute;
-    top: 5px;
-    right: 15px;
-    font-size: 2rem;
+    top: -2px;
+    right: 130px;
   }
 
   .navbar-container input[type="checkbox"]:checked ~ .menu-items {
@@ -775,16 +774,8 @@ text-align: center;
   }
 }
 
-@media (max-width : 940px){
-  .Titre{
-    font-size: 2rem;
-  }
-}
 
 @media (max-width : 900px){
-  .Titre{
-    display: none;
-  }
 
   .menu-items li {
     list-style: none;
