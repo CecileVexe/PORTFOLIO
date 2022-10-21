@@ -867,3 +867,29 @@ text-align: center;
   padding: 50px 0;
   background: #f5f5f7;
 }
+
+/*Exp-portfolio*/
+
+.portefolio-img {
+  flex: 1 1 400px;
+  padding: 30px;
+  transform: translateX(150%);
+  animation: about-img-animation 1s ease-in-out forwards;
+}
+
+.portefolio-img img {
+  display: block;
+  /*height: 400px;*/
+  max-width: 100%;
+  margin: auto;
+  object-fit: cover;
+  object-position: right;
+  padding: 1em ;
+}
+
+.portefolio-text {
+  flex: 1 1 400px;
+  padding: 30px;
+  transform: translate(-150%);
+  animation: about-text-animation 1s ease-in-out forwards;
+}
