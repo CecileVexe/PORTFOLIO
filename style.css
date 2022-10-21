@@ -636,6 +636,7 @@ text-align: center;
 @media (max-width: 768px) {
   .navbar {
     opacity: 0.95;
+    display: flex;
   }
 
   .navbar::after{
