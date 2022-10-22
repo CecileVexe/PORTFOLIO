@@ -533,6 +533,7 @@ text-align: center;
 
 .contact-img {
   width: 50%;
+  display: block;
 }
 
 .contact-img img {
@@ -541,6 +542,7 @@ text-align: center;
   width: 60%;
   object-position: center;
   object-fit: cover;
+  margin: 0 auto;
 }
 
 .form-container {
@@ -579,10 +581,18 @@ text-align: center;
   color: #444;
   margin-bottom: 1rem;
   margin-top: -1.2rem;
+  text-align: center;
 }
 
 .form-container a {
   font-size: 2rem;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #footer h2 {
@@ -609,8 +619,16 @@ text-align: center;
 
 .img-reseaux {
   display: flex;
-  justify-content: space-between;
   padding: 2rem;
+}
+
+.img-reseaux a {
+  display: block;
+}
+
+.img-reseaux a img {
+  display: block;
+  margin: 0 auto;
 }
 
 .form-container .img-reseaux img {
