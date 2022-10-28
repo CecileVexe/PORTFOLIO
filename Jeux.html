@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Cécile Valente</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="scroll.js"></script>
+  </head>
+  <body>
+    <section class="top-nav">
+      <div id="nav-logo">
+        <a href="Index.html"><img src="https://i.postimg.cc/Fz3xGLJK/Fichier-2-2x.png" alt="" class="cube-logo"></a>
+      </div>
+    </section>
+
+    <section id="charte-resume">
+      <div class="about-wrapper container ">
+        <div class="portefolio-text">
+          <h2>Mise en place d'un jeu en Javascript</h2> <br/>
+            <p class="justify-text">Après m'être auto formé sur le language Javascript, j'ai décidé de mettre en place 
+              un jeu de casse brique avec ce language.
+            </p>
+              <p class="justify-text">Cela m'a permis de mettre en pratique mes connaissances acquises et principalement les fonctions et les boucles
+                à conditions. Cela m'a également permis de prendre en main l'outil canvas et de dessiner des formes avec jusqu'à les mettre en mouvement.
+              </p>
+              <p class="justify-text">J'ai pris beaucoup de plaisir à voir ce jeux grandir et prendre forme au fil de mes lignes de code 
+                et cela m'a aussi appris à organiser mes pensées et idées. J'ai eu de nombreuses idées différentes que j'ai du classé par
+                ordre de priorité et en mettre certaines de cotés le temps de finir mon code principale. Ensuite, j'ai dû reprendre mon 
+                code pour y implémenter les éléments dont j'avais eu l'idée en cours de travaille. J'ai pu ainsi comprendre l'intéret d'annoter
+                son code mais aussi de prendre conscience de tout les tenants et les aboutissant d'une fonction, savoir ce qu'elle implique et
+                comment la modifier, elle et ses enfants, pour que les nouvelles fonctionnalités ne mettent pas en péril le code de base.
+              </p>
+              <br/>
+              <h3>Téchnilogie utilisées : HTML | CSS | JS | VScode</h3>
+              <br/>
+
+              <div class="liens">
+                <h4>Choissiez votre difficulté :</h4>
+                <p>Le jeux ne fonctionne pas sur téléphone et tablette.</p>
+                <div class="liste">
+                    <ul>
+                        <li><a href="casse-brique-facile.html">Facile</a></li>
+                        <li><a href="casse-brique-moyen.html">Moyen</a></li>
+                        <li><a href="casse-brique-hardcore.html">Hardcore</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="portefolio-img">
+          <img src="https://i.postimg.cc/JzSVBC85/image-2022-10-27-161401420.png" alt="">
+        </div>
+      </div>
+    </section>
+    <footer id="footer">
+      <h2>Cécile Valente &copy;</h2>
+      <h3><a href="https://www.flaticon.com/free-stickers/people" title="people stickers" class="lien">
+        People stickers created by Stickers - Flaticon</a></h3>
+    </footer>
+  </body>
+  <!-- 
+    .................../ JS Code for smooth scrolling /...................... -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Add smooth scrolling to all links
+      $("a").on("click", function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800,
+            function () {
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            }
+          );
+        } // End if
+      });
+    });
+  </script>
+</html>

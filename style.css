@@ -349,6 +349,10 @@ body {
 
 /* .........../Formations/............ */
 
+.h2-left {
+  text-align: left;
+}
+
 .formations-heading {
   text-align: center;
   font-size: 3.4rem;
@@ -1056,3 +1060,49 @@ html, body {
     border-bottom: 1px solid #444;
   }
 }
+
+/*Jeux*/
+
+.liste {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  }
+  
+  .liens {
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .liens ul {
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+  }
+  
+  .liens li {
+      list-style: none;
+  }
+  
+  .liens a {
+   text-decoration: none;
+   font-weight: bold;
+   background-color: #000000;
+   border-radius: 50px;
+   padding: 7px;
+   padding-left: 10px;
+   padding-right: 10px;
+   color: #ffffff;
+  }
+  
+  /*.liens a:visited {
+      color: black;
+  }*/
+  
+  .liens a:hover {
+      background-color: #5bd09b;
+      color: #ffffff;
+      transition: color 0.4s ease-in-out;
+  }
