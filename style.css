@@ -933,12 +933,8 @@ html, body {
   z-index: 1;
 }
 
-#nav-logo{
-  padding: 50px;
-}
-
 .cube-logo {
-  width: 10%;
+  width: 30px;
 }
 
 .menu {
