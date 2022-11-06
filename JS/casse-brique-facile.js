@@ -35,6 +35,7 @@ for(var c=0; c<brickColumnCount; c++) {
     for(var r=0; r<brickRowCount; r++) {
       bricks[c][r] = { x: 0, y: 0, status: 1 };
     }
+    console.log("Tableau brique",bricks);
 }
 
   function drawBall() {
@@ -63,12 +64,20 @@ function drawBricks() {
           var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
           bricks[c][r].x = brickX;
           bricks[c][r].y = brickY;
+          if (brickX==370 && brickY==150){
+            ctx.beginPath();
+            ctx.rect(brickX, brickY, brickWidth, brickHeight);
+            ctx.fillStyle = "#000000";
+            ctx.fill();
+            ctx.closePath();
+            } else {
           /*Dessin brique*/
           ctx.beginPath();
           ctx.rect(brickX, brickY, brickWidth, brickHeight);
           ctx.fillStyle = "#FBE216";
           ctx.fill();
           ctx.closePath();
+            }
       }
   }
 }
@@ -130,7 +139,7 @@ return
           paddleX = 0;
       }
     }
-    requestAnimationFrame(draw);
+ 
     };
 
 document.addEventListener("keydown", keyDownHandler, false);
@@ -169,9 +178,15 @@ function collisionDetection() {
           var b = bricks[c][r];
           if(b.status == 1) {
               if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
+                if (b.x == 370 && b.y == 150) {
+                  interval = setInterval(draw, 17);
                   dy = -dy;
                   b.status = 0;
-                  score++
+                  score++;
+                }else{
+                  dy = -dy;
+                  b.status = 0;
+                  score++;
                   if(score == brickRowCount*brickColumnCount) {
                       alert("C'est gagné, Bravo !");
                       x = -10
@@ -179,6 +194,7 @@ function collisionDetection() {
                       dx = 0
                       dy = 0
                   }
+                }
               }
           }
       }
@@ -197,7 +213,7 @@ function drawLives() {
   ctx.fillText("Lives: "+lives, canvas.width-65, 20);
 }
 
-draw();
+var interval = setInterval(draw, 20);
 
 document.body.onkeyup = function(e) {
   if (e.key == " " ||
@@ -205,5 +221,6 @@ document.body.onkeyup = function(e) {
       e.keyCode == 32      
   ) {
 document.location.reload();
+clearInterval(interval); // Needed for Chrome to end game
 }
 }
