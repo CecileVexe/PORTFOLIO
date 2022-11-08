@@ -865,6 +865,14 @@ text-align: center;
   }
 }
 
+@media (max-width:370px) {
+  .main-title {
+    text-transform: uppercase;
+    margin-top: 1.5em;
+    font-size: 4rem;
+  }
+}
+
 /* ......./ Other HTMl page /......... */
 
 
