@@ -888,6 +888,9 @@ text-align: center;
 .portefolio-img {
   flex: 1 1 400px;
   padding: 30px;
+  background-image: url(images/jeux-js.png);
+  background-repeat: no-repeat;
+  background-position: center;
   transform: translateX(150%);
   animation: about-img-animation 1s ease-in-out forwards;
 }
