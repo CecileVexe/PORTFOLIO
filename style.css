@@ -789,11 +789,7 @@ text-align: center;
   }
 
   /* ......./ top-nav /......... */
-
-  .top-nav {
-    justify-content: flex-start;
-  }
-
+  
   .logo {
     position: absolute;
     top: 5px;
