@@ -32,6 +32,10 @@ html, body {
   box-sizing: border-box;
 }
 
+.menu a {
+  z-index: 5;
+}
+
 /* ///////////..utility classes../////////// */
 
 .container {
