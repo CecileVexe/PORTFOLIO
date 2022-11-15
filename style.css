@@ -275,7 +275,7 @@ html, body {
 .about-img {
   flex: 1 1 400px;
   padding: 30px;
-  transform: translateX(150%);
+  /*transform: translateX(150%);*/
   animation: about-img-animation 1s ease-in-out forwards;
 }
 
