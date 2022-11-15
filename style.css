@@ -653,6 +653,10 @@ text-align: center;
 }
 
 /*..............Footer............*/
+#footer
+{
+  position: relative;
+}
 
 #footer h2 {
   text-align: center;
@@ -702,6 +706,7 @@ text-align: center;
 #charte-resume {
   padding: 50px 0;
   background: #f5f5f7;
+  position: relative;
 }
 
 /*Exp-portfolio*/
@@ -709,11 +714,8 @@ text-align: center;
 .portefolio-img {
   flex: 1 1 400px;
   padding: 30px;
-  background-image: url(images/jeux-js.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  transform: translateX(150%);
+  position: relative;
+  /*transform: translateX(150%);*/
   animation: about-img-animation 1s ease-in-out forwards;
 }
 
@@ -735,6 +737,17 @@ text-align: center;
 }
 
 /*Jeux*/
+
+.jeux-img {
+  flex: 1 1 400px;
+  padding: 30px;
+  background-image: url(images/jeux-js.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: translateX(150%);
+  animation: about-img-animation 1s ease-in-out forwards;
+}
 
 .liste {
   padding: 20px;
@@ -878,9 +891,9 @@ text-align: center;
     align-items: center;
   }
 
-  .portefolio-img {
+  /*.portefolio-img {
   height: 200px;
-  }
+  }*/
 
   /* ......./ competences /......... */
 
