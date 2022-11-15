@@ -991,6 +991,13 @@ height: 50vmax;
 }
 }
 
+@media (max-width: 1200px) {
+  .comp-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
 @media (max-width:370px) {
 .main-title {
 text-transform: uppercase;
