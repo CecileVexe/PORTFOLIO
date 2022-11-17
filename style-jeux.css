@@ -107,30 +107,30 @@ h2 {
     flex-direction: column;
 }
 
-.liste {
+.liste-jeux {
 padding: 20px;
 display: flex;
 justify-content: center;
 }
 
-.liens {
+.liens-jeux {
     padding: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.liens ul {
+.liens-jeux ul {
     display: flex;
     gap: 50px;
     justify-content: center;
 }
 
-.liens li {
+.liens-jeux li {
     list-style: none;
 }
 
-.liens a {
+.liens-jeux a {
  text-decoration: none;
  font-weight: bold;
  background-color: #FBE216;
@@ -141,11 +141,11 @@ justify-content: center;
  color: #000000;
 }
 
-.liens a:visited {
+.liens-jeux a:visited {
     color: black;
 }
 
-.liens a:hover {
+.liens-jeux a:hover {
     background-color: #000000;
     color: #FBE216;
     transition: color 0.4s ease-in-out;
