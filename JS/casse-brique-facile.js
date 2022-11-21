@@ -64,7 +64,7 @@ function drawBricks() {
           var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
           bricks[c][r].x = brickX;
           bricks[c][r].y = brickY;
-          if (brickX==370 && brickY==150){
+          if (brickX==200 && brickY==90){
             ctx.beginPath();
             ctx.rect(brickX, brickY, brickWidth, brickHeight);
             ctx.fillStyle = "#000000";
@@ -178,7 +178,7 @@ function collisionDetection() {
           var b = bricks[c][r];
           if(b.status == 1) {
               if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
-                if (b.x == 370 && b.y == 150) {
+                if (b.x == 200 && b.y == 90) {
                   interval = setInterval(draw, 19);
                   dy = -dy;
                   b.status = 0;
