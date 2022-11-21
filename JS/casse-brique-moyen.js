@@ -63,12 +63,20 @@ function drawBricks() {
           var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
           bricks[c][r].x = brickX;
           bricks[c][r].y = brickY;
-          /*Dessin brique*/
-          ctx.beginPath();
-          ctx.rect(brickX, brickY, brickWidth, brickHeight);
-          ctx.fillStyle = "#FBE216";
-          ctx.fill();
-          ctx.closePath();
+          if (brickX==200 && brickY==90){
+            ctx.beginPath();
+            ctx.rect(brickX, brickY, brickWidth, brickHeight);
+            ctx.fillStyle = "#000000";
+            ctx.fill();
+            ctx.closePath();
+          }else {
+            /*Dessin brique*/
+            ctx.beginPath();
+            ctx.rect(brickX, brickY, brickWidth, brickHeight);
+            ctx.fillStyle = "#FBE216";
+            ctx.fill();
+            ctx.closePath();
+              }
       }
   }
 }
@@ -169,6 +177,14 @@ function collisionDetection() {
           var b = bricks[c][r];
           if(b.status == 1) {
               if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
+                if (b.x == 200 && b.y == 90) {
+                  clearInterval(interval);
+                  interval = setInterval(draw, 7);
+                  console.log (interval);
+                  dy = -dy;
+                  b.status = 0;
+                  score++;
+                }else{
                   dy = -dy;
                   b.status = 0;
                   score++
@@ -183,6 +199,7 @@ function collisionDetection() {
           }
       }
   }
+}
 }
 
 function drawScore() {

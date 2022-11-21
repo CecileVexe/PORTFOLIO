@@ -179,7 +179,8 @@ function collisionDetection() {
           if(b.status == 1) {
               if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
                 if (b.x == 200 && b.y == 90) {
-                  interval = setInterval(draw, 19);
+                  clearInterval(interval)
+                  interval = setInterval(draw, 10);
                   dy = -dy;
                   b.status = 0;
                   score++;
